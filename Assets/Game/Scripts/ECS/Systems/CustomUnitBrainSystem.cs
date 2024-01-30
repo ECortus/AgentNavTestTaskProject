@@ -8,6 +8,7 @@ using Unity.Transforms;
 using UnityEngine;
 using Unity.Burst;
 using Unity.Collections;
+using Random = System.Random;
 
 namespace ECS.Test
 {
@@ -65,27 +66,28 @@ namespace ECS.Test
             {
                 Ecb = buffer,
                 LifeLookup = m_LifeLookup,
-                ElapsedTime = state.WorldUnmanaged.Time.ElapsedTime,
+                ElapsedTime = state.WorldUnmanaged.Time.ElapsedTime
             }.Schedule();
 
             new CustomUnitBrainFacingJob
             {
                 TransformLookup = m_TransformLookupRW,
-                DeltaTime = state.WorldUnmanaged.Time.DeltaTime,
+                DeltaTime = state.WorldUnmanaged.Time.DeltaTime
             }.Schedule();
             
             new CustomUnitBrainFollowJob
             {
                 TransformLookup = m_TransformLookupRO,
                 ShapeLookup = m_ShapeLookup,
-                ElapsedTime = state.WorldUnmanaged.Time.ElapsedTime,
+                ElapsedTime = state.WorldUnmanaged.Time.ElapsedTime
             }.ScheduleParallel();
 
             new CustomUnitBrainIdleJob
             {
                 Player = SystemAPI.GetSingletonEntity<PlayerTag>(),
+                RangeToPlayer = UnityEngine.Random.Range(3f, 9f),
                 UnitLookup = m_UnitLooukup,
-                Spatial = spatial,
+                Spatial = spatial
             }.ScheduleParallel();
 
             new CustomUnitBrainSmartStopJob
@@ -93,7 +95,7 @@ namespace ECS.Test
                 BodyLookup = m_BodyLookup,
                 BrainLookup = m_BrainLookup,
                 UnitLookup = m_UnitLooukup,
-                Spatial = spatial,
+                Spatial = spatial
             }.Schedule();
 
             new CustomUnitBrainHiveMindStopJob
@@ -251,6 +253,8 @@ namespace ECS.Test
         {
             [ReadOnly] 
             public Entity Player;
+            [ReadOnly] 
+            public float RangeToPlayer;
             [ReadOnly]
             public AgentSpatialPartitioningSystem.Singleton Spatial;
             [ReadOnly]
@@ -277,11 +281,11 @@ namespace ECS.Test
 
                 if (action.Target == Entity.Null)
                 {
-                    if (unit.PlayerFriendly)
+                    if (unit.PlayerFriendly && follow.Target != Player)
                     {
                         follow.Target = Player;
                         follow.Unit = unit;
-                        follow.MinDistance = 8f;
+                        follow.MinDistance = RangeToPlayer;
                         brain.State = CustomUnitBrainState.PlayerFollower;
                     }
                     
