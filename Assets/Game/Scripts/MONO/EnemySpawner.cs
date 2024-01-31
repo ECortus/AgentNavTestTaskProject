@@ -44,7 +44,7 @@ public class EnemySpawner : MonoBehaviour
         Deactivate();
         
         _spawnerCancellationToken = new CancellationTokenSource();
-        while (_spawnerCancellationToken != null)
+        while (_spawnerCancellationToken != null && GameManager.GameStarted)
         {
             Spawn();
 

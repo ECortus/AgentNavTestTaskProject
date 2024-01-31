@@ -65,7 +65,7 @@ public class AllySpawner : MonoBehaviour
         Deactivate();
         
         _spawnerCancellationToken = new CancellationTokenSource();
-        while (_spawnerCancellationToken != null)
+        while (_spawnerCancellationToken != null && GameManager.GameStarted)
         {
             if (_getMouseInput)
             {

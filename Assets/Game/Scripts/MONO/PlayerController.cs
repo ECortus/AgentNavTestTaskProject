@@ -5,17 +5,16 @@ using ProjectDawn.Navigation;
 using ProjectDawn.Navigation.Hybrid;
 using Unity.Mathematics;
 using UnityEngine;
+using Zenject;
 
 public class PlayerController : MonoBehaviour
 {
-    public static PlayerController Instance { get; private set; }
-
-    public Transform Transform => transform;
+    [Inject] public static PlayerController Instance { get; private set; }
     
     private Controls _controls;
     private AgentAuthoring _body;
 
-    private void Awake()
+    [Inject] private void Awake()
     {
         if (Instance && Instance != this)
         {
@@ -37,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private void OnDestroy()
     {
         _controls.Disable();
+        GameManager.Instance.StopGame();
     }
 
     void Update()
