@@ -21,7 +21,7 @@ public class CameraSingleton : MonoBehaviour
 
     [Inject] void Awake()
     {
-        if (Instance && Instance == this)
+        if (Instance && Instance != this)
         {
             Destroy(gameObject);
             return;

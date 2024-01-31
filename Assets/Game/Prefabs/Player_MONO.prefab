@@ -120,11 +120,11 @@ GameObject:
   - component: {fileID: 3957467856306862371}
   - component: {fileID: 3367539632420570450}
   - component: {fileID: 5618533357016619436}
-  - component: {fileID: 8569350360146494171}
-  - component: {fileID: 3369175922295024209}
-  - component: {fileID: 17726425664125958}
+  - component: {fileID: 5732961610256069265}
+  - component: {fileID: -5537046942716200073}
+  - component: {fileID: -867052852270778885}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player_MONO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -250,7 +250,7 @@ MonoBehaviour:
     Enabled: 1
     FatigueSpeed: 0.5
     RecoverySpeed: 0.4
---- !u!114 &8569350360146494171
+--- !u!114 &5732961610256069265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,10 +259,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7217226820824779731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88c4b3aba75c36d4989e12b79bb86ab8, type: 3}
+  m_Script: {fileID: 11500000, guid: 196ba3bae51b8fa4293c8bc44d6085bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3369175922295024209
+--- !u!114 &-5537046942716200073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -271,13 +271,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7217226820824779731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b83b2fdbe092ffc4b83edf3f128e4836, type: 3}
+  m_Script: {fileID: 11500000, guid: 239886ec04032ed4f9493d3d92eaf1ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: 0
   PlayerFriendly: 1
   Life: 200
---- !u!114 &17726425664125958
+--- !u!114 &-867052852270778885
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7217226820824779731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9999ad97aa80f91418b83eecdac460cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 131c8d195a6f66b48b9501b895499aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10

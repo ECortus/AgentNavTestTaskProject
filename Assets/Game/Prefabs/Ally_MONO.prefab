@@ -15,10 +15,10 @@ GameObject:
   - component: {fileID: 2586831485244482050}
   - component: {fileID: 7912012615683974696}
   - component: {fileID: 8726582836005628617}
-  - component: {fileID: 8918288166072491643}
-  - component: {fileID: -1672276242480183437}
+  - component: {fileID: -5383214269117217985}
+  - component: {fileID: 4947107353528613629}
   m_Layer: 0
-  m_Name: Ally
+  m_Name: Ally_MONO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
     Enabled: 1
     FatigueSpeed: 0.5
     RecoverySpeed: 0.4
---- !u!114 &8918288166072491643
+--- !u!114 &-5383214269117217985
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,13 +153,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 387329654623964586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b83b2fdbe092ffc4b83edf3f128e4836, type: 3}
+  m_Script: {fileID: 11500000, guid: 239886ec04032ed4f9493d3d92eaf1ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: 1
   PlayerFriendly: 1
   Life: 50
---- !u!114 &-1672276242480183437
+--- !u!114 &4947107353528613629
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 387329654623964586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9999ad97aa80f91418b83eecdac460cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 131c8d195a6f66b48b9501b895499aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10
