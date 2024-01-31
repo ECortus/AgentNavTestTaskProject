@@ -7,7 +7,6 @@ using Zenject;
 public class GameManager : MonoBehaviour
 {
     [Inject] public static GameManager Instance { get; private set; }
-    [SerializeField] private GameObject stopText;
 
     public static bool GameStarted { get; private set; }
 
@@ -29,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     void OnGameStart()
     {
+        if (GameStarted) return;
         GameStarted = true;
         
         AgentsCountersMono.Init();
@@ -44,11 +44,11 @@ public class GameManager : MonoBehaviour
 
     void OnStopGame()
     {
+        if (!GameStarted) return;
+        
         EnemySpawner.Instance.Deactivate();
         AllySpawner.Instance.Deactivate();
         
-        stopText.SetActive(true);
-
         GameStarted = false;
     }
 }
