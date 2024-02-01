@@ -88,20 +88,8 @@ namespace ECS.Test
     {
         protected override void OnUpdate()
         {
-            Entities.ForEach((Entity entity, Transform transform, in CustomUnit unit, in CustomUnitDead unitDead) =>
+            Entities.ForEach((Entity entity, Transform transform, in CustomUnitDead unitDead) =>
             {
-                switch (unit.Owner)
-                {
-                    case CustomUnitId.Ally:
-                        AgentsCountersMono.AddAllyKilled();
-                        break;
-                    case CustomUnitId.Enemy:
-                        AgentsCountersMono.AddEnemyKilled();
-                        break;
-                    default:
-                        break;
-                }
-            
                 GameObject.Destroy(transform.gameObject);
                 EntityManager.DestroyEntity(entity);
             

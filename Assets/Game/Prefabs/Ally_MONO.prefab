@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8726582836005628617}
   - component: {fileID: -5383214269117217985}
   - component: {fileID: 4947107353528613629}
+  - component: {fileID: 1816050718922759301}
   m_Layer: 0
   m_Name: Ally_MONO
   m_TagString: Untagged
@@ -174,6 +175,18 @@ MonoBehaviour:
   Damage: 10
   AttackRange: 0.4
   AggresionRadius: 15
+--- !u!114 &1816050718922759301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387329654623964586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbfe5116d961c6642a11edde4b5232ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2163607253521410395
 GameObject:
   m_ObjectHideFlags: 0

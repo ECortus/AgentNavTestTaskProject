@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 4039079949260034135}
   - component: {fileID: -6981088761671983174}
   - component: {fileID: -6646676627986171982}
+  - component: {fileID: -5414070896901197008}
   m_Layer: 0
   m_Name: Enemy_MONO
   m_TagString: Untagged
@@ -279,3 +280,15 @@ MonoBehaviour:
   Damage: 5
   AttackRange: 0.3
   AggresionRadius: 9
+--- !u!114 &-5414070896901197008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6564103657138603181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbfe5116d961c6642a11edde4b5232ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

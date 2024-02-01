@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 {
     [Inject] public static GameManager Instance { get; private set; }
 
+    public static Action OnGameStart { get;  set; }
+    public static Action OnGameStop { get; set; }
+    
     public static bool GameStarted { get; private set; }
 
     [Inject] private void Awake()
@@ -23,32 +26,22 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        OnGameStart();
+        GameStart();
     }
 
-    void OnGameStart()
+    void GameStart()
     {
         if (GameStarted) return;
         GameStarted = true;
         
-        AgentsCountersMono.Init();
-        
-        EnemySpawner.Instance.Activate();
-        AllySpawner.Instance.Activate();
+        OnGameStart?.Invoke();
     }
 
     public void StopGame()
     {
-        OnStopGame();
-    }
-
-    void OnStopGame()
-    {
         if (!GameStarted) return;
-        
-        EnemySpawner.Instance.Deactivate();
-        AllySpawner.Instance.Deactivate();
-        
         GameStarted = false;
+        
+        OnGameStop?.Invoke();
     }
 }
