@@ -9,11 +9,8 @@ using Random = UnityEngine.Random;
 public class Player : MonoBehaviour
 {
     [SerializeField] private string sessionName;
-    [SerializeField] private PlayerUI infoUI;
-    
     public string SessionName => sessionName;
     
-    [Space]
     [SerializeField] private GameObject[] units;
     public GameObject GetUnit()
     {
@@ -21,21 +18,24 @@ public class Player : MonoBehaviour
         return units[Random.Range(0, units.Length)];
     }
 
+    public Action OnUnitUpdate { get; set; }
+    void UnitUpdate() => OnUnitUpdate?.Invoke();
+    
     public int UnitAlive { get; private set; }
     public int UnitKilled { get; private set; }
     public void AddAlive()
     {
         UnitAlive++;
-        infoUI.Refresh(this);
+        UnitUpdate();
     }
     public void AddKilled()
     {
         UnitAlive--;
         UnitKilled++;
-        infoUI.Refresh(this);
+        UnitUpdate();
     }
 
-    [SerializeField] private UnityEvent OnDeathEvent;
+    public Action OnDeathEvent { get; set; }
 
     private void OnDestroy()
     {
@@ -47,6 +47,6 @@ public class Player : MonoBehaviour
         UnitAlive = 0;
         UnitKilled = 0;
         
-        infoUI.Refresh(this);
+        UnitUpdate();
     }
 }

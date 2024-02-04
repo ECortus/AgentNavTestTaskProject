@@ -3062,6 +3062,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6313673383503471399, guid: 759b720b1b085144fbe49a52ab2687f8, type: 3}
   m_PrefabInstance: {fileID: 774225772}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &796469902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 796469903}
+  - component: {fileID: 796469904}
+  m_Layer: 0
+  m_Name: PlayerDeathEvent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &796469903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796469902}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1629619460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &796469904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796469902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030ef20366f547188225aa48769a3377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2102685509}
 --- !u!1 &838549184
 GameObject:
   m_ObjectHideFlags: 0
@@ -3666,6 +3711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e440cf9cd5a69e744a168e4cfb0cdf67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 307819781}
   nameText: {fileID: 633459802}
   aliveUnitText: {fileID: 1118716124}
   killedUnitText: {fileID: 1312823761}
@@ -5426,6 +5472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e440cf9cd5a69e744a168e4cfb0cdf67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2102685509}
   nameText: {fileID: 67701265}
   aliveUnitText: {fileID: 1620280830}
   killedUnitText: {fileID: 1936161742}
@@ -6408,6 +6455,7 @@ Transform:
   - {fileID: 2102685510}
   - {fileID: 307819780}
   - {fileID: 1065150450}
+  - {fileID: 796469903}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1629619461

@@ -159,12 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sessionName: Opponent
-  infoUI: {fileID: 0}
   units:
   - {fileID: 6564103657138603181, guid: 47981880422140e41bde6e5e6516b21d, type: 3}
-  OnDeathEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1748282699029104946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: 2
   PlayerFriendly: 0
-  Life: 1500
+  Life: 5000
 --- !u!114 &2276108969410090960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 50
-  AttackRange: 0.3
+  AttackRange: 1
   AggresionRadius: 5
 --- !u!114 &6784747637608699945
 MonoBehaviour:
