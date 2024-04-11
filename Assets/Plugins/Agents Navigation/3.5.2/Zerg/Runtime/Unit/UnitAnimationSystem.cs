@@ -19,8 +19,8 @@ namespace ProjectDawn.Navigation.Sample.Zerg
 
                 float speed = math.length(body.Velocity);
 
-                animator.SetFloat(unit.MoveSpeedId, speed);
-                animator.speed = speed > 0.3f ? speed * unit.MoveSpeed : 1f;
+                animator.SetBool(unit.MoveId, speed > 0.3f);
+                // animator.speed = speed > 0.3f ? speed * unit.MoveSpeed : 1f;
             }).WithoutBurst().Run();
         }
     }

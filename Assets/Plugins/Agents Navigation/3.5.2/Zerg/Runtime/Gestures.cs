@@ -12,7 +12,8 @@ namespace ProjectDawn.Navigation.Sample.Zerg
 
         public bool Stop()
         {
-            return Input.GetKeyUp(KeyCode.S);
+            // return Input.GetKeyUp(KeyCode.S);
+            return false;
         }
 
         public bool MoveCamera(float borderSize, out float2 direction)

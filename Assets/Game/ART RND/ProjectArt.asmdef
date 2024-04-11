@@ -1,0 +1,19 @@
+{
+    "name": "ProgectArt",
+    "rootNamespace": "ProjectArt",
+    "references": [
+        "GUID:9da382087e8bdbf4b9ee0ad556776ddb",
+        "GUID:f798c18cf97c54bfa937516214a185a6",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:a653f303a86b2b041a1f0c2df5bcdaa0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

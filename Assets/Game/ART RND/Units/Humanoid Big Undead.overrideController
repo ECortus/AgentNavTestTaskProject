@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Humanoid Big Undead
+  m_Controller: {fileID: 9100000, guid: a1f407a91cf734b768a76e9d04a0a42f, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d065fd125d9344bd0ab83ce5f036bdb8, type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 050c2cf5791682d43945a814cd3a3b7e,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: c43f9e58f6b654edb93b6385eee68c3c, type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 050c2cf5791682d43945a814cd3a3b7e,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 9eeb03a9da8e94784b69208899fd43a8, type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 3981f9c306a322f42837d2ed7765a79f,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 049a927f62d1c4e9c9e1f2fc7f91d1f3, type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 0d194f04f8dcd6e4cb9b86de7663f249,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: dc27a949fee5f4c59bf0a83001ef2620, type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 38ea0ff36d2128544bd40140d4442d08,
+      type: 3}

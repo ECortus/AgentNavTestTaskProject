@@ -15,22 +15,23 @@ namespace ProjectDawn.Navigation.Sample.Zerg
 
         void Start()
         {
-            Cursor.lockState = CursorLockMode.Confined;
+            // Cursor.lockState = CursorLockMode.Confined;
             m_Gestures = GameObject.FindObjectOfType<Gestures>(true);
         }
 
         void Update()
         {
-            if (m_Gestures == null)
-                return;
-
-            if (m_Gestures.MoveCamera(BorderSize, out float2 direction))
+            // if (m_Gestures == null)
+            //     return;
+            //
+            // if (m_Gestures.MoveCamera(BorderSize, out float2 direction))
             {
+                float2 direction = new float2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
                 Vector3 position = Camera.main.transform.position + new Vector3(direction.x, 0, direction.y) * Speed * Time.deltaTime;
 
                 // Force position within the bounds
-                position.x = Mathf.Clamp(position.x, Bounds.xMin, Bounds.xMax);
-                position.z = Mathf.Clamp(position.z, Bounds.yMin, Bounds.yMax);
+                // position.x = Mathf.Clamp(position.x, Bounds.xMin, Bounds.xMax);
+                // position.z = Mathf.Clamp(position.z, Bounds.yMin, Bounds.yMax);
 
                 Camera.main.transform.position = position;
             }

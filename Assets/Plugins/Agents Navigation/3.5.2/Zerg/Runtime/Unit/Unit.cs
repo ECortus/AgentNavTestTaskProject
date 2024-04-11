@@ -60,6 +60,7 @@ namespace ProjectDawn.Navigation.Sample.Zerg
     public struct UnitAnimator : IComponentData
     {
         public float MoveSpeed;
+        public int MoveId;
         public int MoveSpeedId;
         public int AttackId;
     }

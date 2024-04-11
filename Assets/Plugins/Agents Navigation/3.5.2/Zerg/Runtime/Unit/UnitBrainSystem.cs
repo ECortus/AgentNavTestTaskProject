@@ -355,13 +355,13 @@ namespace ProjectDawn.Navigation.Sample.Zerg
                 }
 
                 // Reduce target life
-                targetLife.Life -= combat.Damage;
-                if (targetLife.Life <= 0)
-                {
-                    targetLife.Life = 0;
-                    Ecb.AddComponent<UnitDead>(combat.Target);
-                }
-                LifeLookup[combat.Target] = targetLife;
+                // targetLife.Life -= combat.Damage;
+                // if (targetLife.Life <= 0)
+                // {
+                //     targetLife.Life = 0;
+                //     Ecb.AddComponent<UnitDead>(combat.Target);
+                // }
+                // LifeLookup[combat.Target] = targetLife;
 
                 // Set attack on cooldown
                 combat.CooldownTime = ElapsedTime;

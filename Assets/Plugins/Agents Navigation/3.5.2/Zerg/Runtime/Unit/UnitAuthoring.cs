@@ -7,7 +7,7 @@ namespace ProjectDawn.Navigation.Sample.Zerg
     public class UnitAuthoring : MonoBehaviour
     {
         public PlayerId Owner;
-        public Animator Animator;
+        // public Animator Animator;
         public float MoveAnimationSpeed = 0.4f;
         public float Life = 100;
 
@@ -15,6 +15,8 @@ namespace ProjectDawn.Navigation.Sample.Zerg
 
         void Awake()
         {
+            Animator animator = GetComponentInChildren<Animator>();
+            
             var world = World.DefaultGameObjectInjectionWorld;
             m_Entity = GetComponent<AgentAuthoring>().GetOrCreateEntity();
             world.EntityManager.AddComponentData(m_Entity, new Unit
@@ -23,8 +25,9 @@ namespace ProjectDawn.Navigation.Sample.Zerg
             });
             world.EntityManager.AddComponentData(m_Entity, new UnitAnimator
             {
-                AttackId = Animator.StringToHash("Attack"),
+                AttackId = Animator.StringToHash("Attack 1"),
                 MoveSpeed = MoveAnimationSpeed,
+                MoveId = Animator.StringToHash("Move"),
                 MoveSpeedId = Animator.StringToHash("Speed"),
             });
             world.EntityManager.AddComponentData(m_Entity, new UnitBrain
@@ -36,9 +39,9 @@ namespace ProjectDawn.Navigation.Sample.Zerg
                 Life = Life,
                 MaxLife = Life,
             });
-
-            if (Animator)
-                world.EntityManager.AddComponentObject(m_Entity, Animator);
+            
+            if (animator)
+                world.EntityManager.AddComponentObject(m_Entity, animator);
         }
 
         void OnDestroy()
