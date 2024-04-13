@@ -86,8 +86,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Radius: 2.5
-  Angle: 70
-  MaxAngle: 70
+  Angle: 180
+  MaxAngle: 180
   Mode: 3
   BlockedStop: 0
   UseWalls: 1
